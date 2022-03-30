@@ -1,0 +1,10 @@
+version : "3.7"
+
+services:
+  eolo:
+    build: .
+    ports:
+      - "3333:3333"
+    volumes: 
+      - .:/home/eolo
+    command: "npm run dev"
