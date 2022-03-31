@@ -8,6 +8,9 @@ services:
     volumes: 
       - .:/home/eolo
     command: "npm run dev"
+    depends_on:
+      - dbmysql
+
   dbmysql:
     image: mysql
     restart: always
@@ -17,6 +20,6 @@ services:
       - MYSQL_USER=${USER_db}
       - MYSQL_DATABASE=${DATABASE}
     ports: 
-      - '3200:3306'
+      - '3306:3306'
     volumes:
-      - ./db:/var/lib/mysql
+      - ./db_volume:/var/lib/mysql
