@@ -1,4 +1,4 @@
-version : "3.7"
+version : "3.9"
 
 services:
   eolo:
@@ -8,3 +8,15 @@ services:
     volumes: 
       - .:/home/eolo
     command: "npm run dev"
+  dbmysql:
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=${ROOT_PASSWORD}
+      - MYSQL_PASSWORD=${USER_PASSWORD}
+      - MYSQL_USER=${USER_db}
+      - MYSQL_DATABASE=${DATABASE}
+    ports: 
+      - '3200:3306'
+    volumes:
+      - ./db:/var/lib/mysql
