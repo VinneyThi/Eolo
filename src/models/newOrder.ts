@@ -1,4 +1,5 @@
-import { DataTypes } from 'sequelize'
+import { DataTypes, Optional, ModelDefined } from 'sequelize'
+import { InewOrder } from '@interfaces/InewOrder'
 import db from '@db/index'
 
 const newOrderModelDB = db
@@ -28,5 +29,7 @@ const options = {
   timestamps: true
 }
 
-const newOrderModel = newOrderModelDB.define('newOrders', columns, options)
+type NoteCreationAttributes = Optional<InewOrder, 'orderID'>;
+const newOrderModel: ModelDefined<InewOrder, NoteCreationAttributes> = newOrderModelDB.define('newOrders', columns, options)
+
 export default newOrderModel

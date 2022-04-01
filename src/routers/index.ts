@@ -1,5 +1,5 @@
 import { Router } from 'express'
-
+import { NewOrderController } from '@controllers/NewOrdersContoller'
 const routers = Router()
 
 routers.options('/', (req, res) => {
@@ -17,6 +17,7 @@ routers.get('/newOrders', (req, res) => {
 routers.post('/newOrders', (req, res) => {
   const reqBody = req.body
   console.log(reqBody)
+  NewOrderController.CretedNewOrder(reqBody)
   res.status(201)
   res.end()
 })
