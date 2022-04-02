@@ -1,0 +1,4 @@
+node_modules
+dist
+.vscode
+db_volume
