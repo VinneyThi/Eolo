@@ -9,17 +9,8 @@ routers.options('/', (req, res) => {
   res.end()
 })
 
-routers.get('/newOrders', (req, res) => {
-  res.status(200)
-  res.send('get')
-})
+routers.get('/newOrders', NewOrderController.CretedNewOrder)
 
-routers.post('/newOrders', (req, res) => {
-  const reqBody = req.body
-  console.log(reqBody)
-  NewOrderController.CretedNewOrder(reqBody)
-  res.status(201)
-  res.end()
-})
+routers.post('/newOrders', NewOrderController.CretedNewOrder)
 
 export default routers
