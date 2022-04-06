@@ -8,7 +8,7 @@ This is a microserver to create new orders.
 List of cool things to add:
 
 * [ ] Add Units Test and intregation tests 
-* [ ] Fix realtion in databases e create others tables
+* [ ] Fix databases e create others tables
 * [ ] Create interface to possibilite use other messages server 
 
 
