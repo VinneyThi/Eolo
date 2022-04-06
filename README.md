@@ -10,6 +10,9 @@ List of cool things to add:
 * [ ] Add Units Test and intregation tests 
 * [ ] Fix databases e create others tables
 * [ ] Create interface to possibilite use other messages server 
+* [ ] Add system of logic to generate tokens
+* [ ] Add token in routers
+
 
 
 ## How to use?
